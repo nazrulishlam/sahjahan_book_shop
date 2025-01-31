@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
-      <main>
+      <main className="pt-32"> {/* Added padding-top to account for fixed navbar */}
         <Hero />
         <BookCategories />
         <AboutSection />
