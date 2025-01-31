@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <NavBar items={navItems} className="mt-4" />
+      <NavBar items={navItems} className="mt-0" />
     </nav>
   );
 };
