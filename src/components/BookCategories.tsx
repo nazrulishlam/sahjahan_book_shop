@@ -22,6 +22,16 @@ const categories = [
     description: "Textbooks and reference materials for students",
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
+  {
+    title: "Technical Books",
+    description: "In-depth guides for technology and engineering topics",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Science Fiction",
+    description: "Explore futuristic worlds and scientific adventures",
+    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  }
 ];
 
 const BookCategories = () => {
