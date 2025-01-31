@@ -1,4 +1,4 @@
-import { BookOpen } from "lucide-react";
+import { BookOpen, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,6 +13,20 @@ const Footer = () => {
             <p className="text-bookstore-beige">
               Your trusted source for books in Pandua, Hooghly.
             </p>
+            <div className="flex space-x-4 pt-4">
+              <a href="#" className="text-bookstore-beige hover:text-white transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-bookstore-beige hover:text-white transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-bookstore-beige hover:text-white transition-colors">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-bookstore-beige hover:text-white transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+            </div>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>

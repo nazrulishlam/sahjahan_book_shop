@@ -31,7 +31,7 @@ const BookCategories = () => {
         <h2 className="text-3xl font-bold text-bookstore-navy mb-8">Our Book Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
               <div className="aspect-w-16 aspect-h-9">
                 <img
                   src={category.image}
@@ -39,10 +39,10 @@ const BookCategories = () => {
                   className="object-cover w-full h-48"
                 />
               </div>
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{category.title}</h3>
-                <p className="text-bookstore-text mb-4">{category.description}</p>
-                <Button className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90">
+                <p className="text-bookstore-text mb-4 flex-grow">{category.description}</p>
+                <Button className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto">
                   Browse Category
                 </Button>
               </div>
