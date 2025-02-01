@@ -12,8 +12,8 @@ const FlippingBook = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-[400px] w-full bg-bookstore-cream">
-      <div className="book w-[220px] h-[320px] relative cursor-pointer" style={{
+    <div className="flex justify-center items-center min-h-[500px] w-full bg-bookstore-cream">
+      <div className="book w-[300px] h-[400px] relative cursor-pointer" style={{
         perspective: '1000px',
         background: '#8b5a2b',
         borderRadius: '10px',
@@ -35,7 +35,7 @@ const FlippingBook = () => {
           transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(-180deg)'
         }}>
           <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold p-4 text-center">
-            Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more. Find Address, Contact Number, Reviews & Ratings, Photos, Maps of Sahjahan Book House, Hooghly
+            Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more
           </div>
         </div>
       </div>
