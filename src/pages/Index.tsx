@@ -4,6 +4,7 @@ import BookCategories from "@/components/BookCategories";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FlippingBook from "@/components/FlippingBook";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <Navbar />
       <main className="pt-24">
         <Hero />
+        <FlippingBook />
         <BookCategories />
         <AboutSection />
         <ContactSection />

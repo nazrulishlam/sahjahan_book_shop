@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      rotate: {
+        'y-180': 'rotateY(180deg)',
+        'y-0': 'rotateY(0deg)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
