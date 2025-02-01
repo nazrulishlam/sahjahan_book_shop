@@ -5,9 +5,16 @@ const Hero = () => {
   return (
     <div className="relative bg-bookstore-navy text-white">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+          backgroundBlendMode: "overlay",
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to bottom, rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.95))",
         }}
       />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
