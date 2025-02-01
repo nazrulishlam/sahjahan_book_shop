@@ -21,13 +21,13 @@ const FlippingBook = () => {
         boxShadow: '5px 5px 15px rgba(0, 0, 0, 0.3)',
         padding: '5px'
       }}>
-        <div className="bookmark absolute top-[10px] right-[10px] w-[40px] h-[80px] bg-red-500 z-10" style={{
+        <div className="bookmark absolute top-[10px] right-[10px] w-[40px] h-[80px] bg-[#8b4513] z-10" style={{
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%)',
           boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
         }}></div>
 
         {/* Cover page */}
-        <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
+        <div className="page w-full h-full absolute bg-[#f5e6d3] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
           transform: currentPage >= 1 ? 'rotateY(-180deg)' : 'rotateY(0deg)',
@@ -60,7 +60,7 @@ const FlippingBook = () => {
           return (
             <div 
               key={pageNum}
-              className="page w-full h-full absolute bg-white border-2 border-[#8b5a2b] rounded" 
+              className="page w-full h-full absolute bg-[#faf7f2] border-2 border-[#8b5a2b] rounded" 
               style={{
                 transformOrigin: 'left',
                 transition: 'transform 1s ease-in-out',
@@ -80,7 +80,7 @@ const FlippingBook = () => {
         })}
 
         {/* Back cover */}
-        <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
+        <div className="page w-full h-full absolute bg-[#f5e6d3] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
           transform: 'rotateY(0deg)',
