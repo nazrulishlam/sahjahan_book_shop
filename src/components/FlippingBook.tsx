@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 const FlippingBook = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = 5; // Total number of pages including cover
 
   useEffect(() => {
     const flipInterval = setInterval(() => {
-      setIsFlipped(prev => !prev);
+      setCurrentPage((prev) => (prev + 1) % totalPages);
     }, 3000); // Flips every 3 seconds
 
     return () => clearInterval(flipInterval);
@@ -24,10 +25,12 @@ const FlippingBook = () => {
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%)',
           boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
         }}></div>
+
+        {/* Cover page */}
         <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: isFlipped ? 'rotateY(-180deg)' : 'rotateY(0deg)',
+          transform: currentPage >= 1 ? 'rotateY(-180deg)' : 'rotateY(0deg)',
           backfaceVisibility: 'hidden',
           transformStyle: 'preserve-3d'
         }}>
@@ -35,15 +38,38 @@ const FlippingBook = () => {
             Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more
           </div>
         </div>
+
+        {/* Additional pages */}
+        {[1, 2, 3, 4].map((pageNum) => (
+          <div 
+            key={pageNum}
+            className="page w-full h-full absolute bg-white border-2 border-[#8b5a2b] rounded" 
+            style={{
+              transformOrigin: 'left',
+              transition: 'transform 1s ease-in-out',
+              transform: currentPage > pageNum ? 'rotateY(-180deg)' : 'rotateY(0deg)',
+              backfaceVisibility: 'hidden',
+              transformStyle: 'preserve-3d',
+              zIndex: totalPages - pageNum
+            }}
+          >
+            <div className="absolute inset-0 flex items-center justify-center text-gray-300 text-lg font-light italic">
+              Page {pageNum}
+            </div>
+          </div>
+        ))}
+
+        {/* Back cover */}
         <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
+          transform: 'rotateY(0deg)',
           backfaceVisibility: 'hidden',
-          transformStyle: 'preserve-3d'
+          transformStyle: 'preserve-3d',
+          zIndex: -1
         }}>
           <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold p-4 text-center">
-            Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more
+            Back Cover
           </div>
         </div>
       </div>
