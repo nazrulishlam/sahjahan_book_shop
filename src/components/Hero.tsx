@@ -29,7 +29,7 @@ const Hero = () => {
             <Button className="bg-bookstore-beige text-bookstore-navy hover:bg-white">
               Browse Books
             </Button>
-            <Button variant="outline" className="text-white border-white hover:bg-white/10">
+            <Button variant="outline" className="text-white border-white hover:bg-white hover:text-bookstore-navy">
               Contact Us
             </Button>
           </div>
