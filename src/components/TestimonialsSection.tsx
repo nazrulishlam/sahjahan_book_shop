@@ -14,7 +14,7 @@ const testimonials = [
     name: "Michael Chen",
     role: "Literature Professor",
     content: "As an academic, I appreciate the well-curated collection of scholarly works. The rare books section is particularly impressive.",
-    rating: 5,
+    rating: 4.5,
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const testimonials = [
     name: "David Thompson",
     role: "Fiction Writer",
     content: "The writing workshops and author events here are phenomenal. It's more than a bookstore - it's a community hub for literary minds.",
-    rating: 5,
+    rating: 4.5,
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const testimonials = [
     name: "James Wilson",
     role: "History Buff",
     content: "Their collection of historical books and first editions is outstanding. I always find rare gems that I can't find anywhere else.",
-    rating: 5,
+    rating: 4.5,
   }
 ];
 
@@ -59,12 +59,10 @@ const TestimonialsSection = () => {
         
         <div className="relative w-full overflow-hidden">
           <div 
-            className="flex gap-6 animate-[slide_60s_linear_infinite]"
+            className="flex gap-6"
             style={{
-              '@keyframes slide': {
-                '0%': { transform: 'translateX(100%)' },
-                '100%': { transform: 'translateX(-100%)' }
-              }
+              transform: 'translateX(-50%)',
+              animation: 'slide 60s linear infinite',
             }}
           >
             {[...testimonials, ...testimonials].map((testimonial, index) => (
@@ -74,12 +72,23 @@ const TestimonialsSection = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, starIndex) => (
+                    {[...Array(Math.floor(testimonial.rating))].map((_, starIndex) => (
                       <Star
                         key={starIndex}
                         className="w-5 h-5 fill-current text-yellow-400"
                       />
                     ))}
+                    {testimonial.rating % 1 !== 0 && (
+                      <div className="relative w-5 h-5">
+                        <Star
+                          className="w-5 h-5 fill-current text-yellow-400 absolute"
+                          style={{ clipPath: 'inset(0 50% 0 0)' }}
+                        />
+                        <Star
+                          className="w-5 h-5 stroke-current text-yellow-400 absolute"
+                        />
+                      </div>
+                    )}
                   </div>
                   <p className="text-bookstore-text mb-6 italic">
                     "{testimonial.content}"
@@ -101,10 +110,10 @@ const TestimonialsSection = () => {
         {`
           @keyframes slide {
             0% {
-              transform: translateX(100%);
+              transform: translateX(-50%);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-150%);
             }
           }
         `}
