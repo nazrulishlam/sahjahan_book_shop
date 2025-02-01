@@ -13,7 +13,7 @@ const FlippingBook = () => {
   }, []);
 
   return (
-    <div className="flex justify-center gap-8 items-center min-h-[500px] w-full bg-bookstore-cream p-8">
+    <div className="flex justify-center gap-16 items-center min-h-[500px] w-full bg-bookstore-cream p-8">
       {/* Left side - Book */}
       <div className="book w-[400px] h-[500px] relative cursor-pointer transition-transform duration-300 hover:scale-105" style={{
         perspective: '1000px',
