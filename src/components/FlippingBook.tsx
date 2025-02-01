@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const FlippingBook = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    const flipInterval = setInterval(() => {
+      setIsFlipped(prev => !prev);
+    }, 3000); // Flips every 3 seconds
+
+    return () => clearInterval(flipInterval);
+  }, []);
+
   return (
     <div className="flex justify-center items-center min-h-[400px] w-full bg-bookstore-cream">
       <div className="book w-[220px] h-[320px] relative cursor-pointer" style={{
@@ -17,15 +27,15 @@ const FlippingBook = () => {
         <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: 'rotateY(0deg)'
+          transform: isFlipped ? 'rotateY(-180deg)' : 'rotateY(0deg)'
         }}></div>
-        <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded group-hover:rotate-y-0" style={{
+        <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: 'rotateY(-180deg)'
+          transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(-180deg)'
         }}>
-          <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold">
-            Hover to flip!
+          <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold p-4 text-center">
+            Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more. Find Address, Contact Number, Reviews & Ratings, Photos, Maps of Sahjahan Book House, Hooghly
           </div>
         </div>
       </div>
