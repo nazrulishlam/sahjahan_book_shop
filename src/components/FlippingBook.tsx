@@ -27,12 +27,18 @@ const FlippingBook = () => {
         <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: isFlipped ? 'rotateY(-180deg)' : 'rotateY(0deg)'
-        }}></div>
+          transform: isFlipped ? 'rotateY(-180deg)' : 'rotateY(0deg)',
+          backfaceVisibility: 'hidden'
+        }}>
+          <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold p-4 text-center">
+            Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more
+          </div>
+        </div>
         <div className="page w-full h-full absolute bg-[#fff8dc] border-2 border-[#8b5a2b] rounded" style={{
           transformOrigin: 'left',
           transition: 'transform 1s ease-in-out',
-          transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(-180deg)'
+          transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(-180deg)',
+          backfaceVisibility: 'hidden'
         }}>
           <div className="absolute inset-0 flex items-center justify-center text-bookstore-brown text-lg font-semibold p-4 text-center">
             Sahjahan Book House in Hooghly is one of the leading businesses in the Book Shops. Also known for Book Shops, Grammar Books, English Books, Novels and much more
