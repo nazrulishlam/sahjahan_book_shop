@@ -14,9 +14,9 @@ const FlippingBook = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[500px] w-full bg-bookstore-cream">
-      <div className="book w-[300px] h-[400px] relative cursor-pointer" style={{
+      <div className="book w-[400px] h-[400px] relative cursor-pointer" style={{
         perspective: '1000px',
-        background: '#8b5a2b',
+        background: '#8E9196', // A realistic neutral gray color for the book
         borderRadius: '10px',
         boxShadow: '5px 5px 15px rgba(0, 0, 0, 0.3)',
         padding: '5px'
