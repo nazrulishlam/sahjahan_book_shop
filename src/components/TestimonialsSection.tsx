@@ -48,7 +48,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-bookstore-cream">
+    <section className="py-16 bg-bookstore-cream overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-bookstore-navy mb-4 animate-fade-in">
           What Our Readers Say
@@ -57,41 +57,58 @@ const TestimonialsSection = () => {
           Discover why book lovers choose us as their literary destination
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={testimonial.id} 
-              className="bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
-              style={{ 
-                animationDelay: `${index * 150}ms`,
-                opacity: 0,
-                animation: 'fade-in 0.5s ease-out forwards'
-              }}
-            >
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, index) => (
-                    <Star
-                      key={index}
-                      className="w-5 h-5 fill-current text-yellow-400 animate-scale-in"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-bookstore-text mb-6 italic">
-                  "{testimonial.content}"
-                </p>
-                <div className="mt-auto">
-                  <p className="font-semibold text-bookstore-navy">
-                    {testimonial.name}
+        <div className="relative w-full overflow-hidden">
+          <div 
+            className="flex gap-6 animate-[slide_60s_linear_infinite]"
+            style={{
+              '@keyframes slide': {
+                '0%': { transform: 'translateX(100%)' },
+                '100%': { transform: 'translateX(-100%)' }
+              }
+            }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <Card 
+                key={`${testimonial.id}-${index}`}
+                className="flex-shrink-0 w-[350px] bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <CardContent className="p-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, starIndex) => (
+                      <Star
+                        key={starIndex}
+                        className="w-5 h-5 fill-current text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-bookstore-text mb-6 italic">
+                    "{testimonial.content}"
                   </p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <div className="mt-auto">
+                    <p className="font-semibold text-bookstore-navy">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style>
+        {`
+          @keyframes slide {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
