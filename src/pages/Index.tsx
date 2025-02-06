@@ -6,6 +6,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FlippingBook from "@/components/FlippingBook";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import EstablishedDate from "@/components/EstablishedDate";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <main className="pt-24">
         <Hero />
+        <EstablishedDate />
         <FlippingBook />
         <BookCategories />
         <AboutSection />
