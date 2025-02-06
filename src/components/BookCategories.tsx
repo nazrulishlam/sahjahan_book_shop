@@ -3,44 +3,49 @@ import { Button } from "./ui/button";
 
 const categories = [
   {
-    title: "Grammar Books",
-    description: "Essential grammar resources for language learners",
+    title: "KG Nursery Books",
+    description: "Educational materials for kindergarten and nursery students",
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Primary Books",
+    description: "Books for primary school education",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Secondary Books",
+    description: "Educational materials for secondary school students",
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "English Books",
-    description: "Comprehensive collection of English literature and learning materials",
-    image: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Novels",
-    description: "Wide range of fiction books from various genres",
-    image: "https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Academic Books",
-    description: "Textbooks and reference materials for students",
+    title: "Higher Secondary",
+    description: "Books for higher secondary education",
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Technical Books",
-    description: "In-depth guides for technology and engineering topics",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    title: "College Books",
+    description: "Academic books for college students",
+    image: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Science Fiction",
-    description: "Explore futuristic worlds and scientific adventures",
-    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    title: "Vocational Books",
+    description: "Books for vocational training and skills development",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Programming",
-    description: "Learn coding and software development",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    title: "D.El.Ed Books",
+    description: "Resources for Diploma in Elementary Education",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "History",
-    description: "Discover the stories of our past",
-    image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    title: "B.Ed Books",
+    description: "Materials for Bachelor of Education students",
+    image: "https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Competitive Books",
+    description: "Study materials for competitive examinations",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Biography",
@@ -48,19 +53,59 @@ const categories = [
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Self Help",
+    title: "Story Books",
+    description: "Collection of engaging stories and novels",
+    image: "https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Dictionary",
+    description: "Comprehensive language reference books",
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "English Grammar",
+    description: "Essential English grammar resources",
+    image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "English Literature",
+    description: "Classic and contemporary English literature",
+    image: "https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Programming Books",
+    description: "Resources for learning programming and coding",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Self Help Books",
     description: "Books for personal growth and development",
     image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Children's Books",
+    title: "Technical Books",
+    description: "Advanced technical and engineering resources",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Children Books",
     description: "Educational and entertaining books for kids",
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Poetry",
-    description: "Collections of classic and modern poetry",
-    image: "https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    title: "Indian Economics",
+    description: "Books covering Indian economic systems and policies",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Indian Politics",
+    description: "Books about Indian political system and history",
+    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Special Edition",
+    description: "Limited and special edition collections",
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   }
 ];
 
