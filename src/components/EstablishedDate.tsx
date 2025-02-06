@@ -50,7 +50,7 @@ const EstablishedDate = () => {
             "Nearly five decades of nurturing minds and inspiring generations through the power of books"
           </motion.p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
