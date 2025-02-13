@@ -1,7 +1,9 @@
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLocation } from "react-router-dom";
 
 interface NavItem {
   name: string;
@@ -15,8 +17,17 @@ interface NavBarProps {
 }
 
 export function NavBar({ items, className }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(items[0].name);
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const matchingItem = items.find(item => item.url === currentPath);
+    if (matchingItem) {
+      setActiveTab(matchingItem.name);
+    }
+  }, [location, items]);
 
   useEffect(() => {
     const handleResize = () => {
