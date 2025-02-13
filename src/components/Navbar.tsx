@@ -1,12 +1,14 @@
+
 import React from "react";
-import { BookOpen, Search, Home, BookText, Phone, Info } from "lucide-react";
+import { BookOpen, Search, Home, BookText, Phone, Info, PartyPopper } from "lucide-react";
 import { Button } from "./ui/button";
 import { NavBar } from "./ui/tubelight-navbar";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Home", url: "#", icon: Home },
-    { name: "Books", url: "#books", icon: BookText },
+    { name: "Home", url: "/", icon: Home },
+    { name: "Books", url: "/books", icon: BookText },
+    { name: "Festival Offered", url: "#festival", icon: PartyPopper },
     { name: "About", url: "#about", icon: Info },
     { name: "Contact", url: "#contact", icon: Phone },
   ];
