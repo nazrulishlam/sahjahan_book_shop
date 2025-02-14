@@ -1,5 +1,7 @@
+
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const categories = [
   {
@@ -127,8 +129,13 @@ const BookCategories = () => {
               <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{category.title}</h3>
                 <p className="text-bookstore-text mb-4 flex-grow">{category.description}</p>
-                <Button className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto">
-                  Browse Category
+                <Button 
+                  className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto"
+                  asChild
+                >
+                  <Link to="/secondary-books">
+                    Browse Category
+                  </Link>
                 </Button>
               </div>
             </Card>
