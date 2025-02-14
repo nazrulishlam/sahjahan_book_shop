@@ -14,11 +14,12 @@ const Books = () => {
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
       <main>
-        <div className="pt-28 px-4 sm:px-6 lg:px-8"> {/* Added horizontal padding */}
-          <LampContainer className="min-h-[60vh]"> {/* Added minimum height */}
+        <div className="pt-28 px-4 sm:px-6 lg:px-8">
+          <LampContainer className="min-h-[60vh]">
             <motion.h1
               initial={{ opacity: 0.5, y: 100 }}
-              whileInView={{ opacity: 1, y: 0, viewport: { once: true } }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
@@ -30,7 +31,8 @@ const Books = () => {
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0, viewport: { once: true } }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
                 delay: 0.5,
                 duration: 0.8,
@@ -42,7 +44,8 @@ const Books = () => {
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0, viewport: { once: true } }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
                 delay: 0.7,
                 duration: 0.8,
