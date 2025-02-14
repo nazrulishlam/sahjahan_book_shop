@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -6,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Books from "./pages/Books";
+import SecondaryBooks from "./pages/SecondaryBooks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +23,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/books" element={<Books />} />
+              <Route path="/secondary-books" element={<SecondaryBooks />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
