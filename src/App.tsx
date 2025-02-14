@@ -24,6 +24,10 @@ const App: React.FC = () => {
               <Route path="/" element={<Index />} />
               <Route path="/books" element={<Books />} />
               <Route path="/secondary-books" element={<SecondaryBooks />} />
+              <Route path="/kg-nursery-books" element={<SecondaryBooks />} />
+              <Route path="/primary-books" element={<SecondaryBooks />} />
+              <Route path="/higher-secondary-books" element={<SecondaryBooks />} />
+              <Route path="/college-books" element={<SecondaryBooks />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
