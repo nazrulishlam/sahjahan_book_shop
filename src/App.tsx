@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Books from "./pages/Books";
 import SecondaryBooks from "./pages/SecondaryBooks";
+import PrimaryBooks from "./pages/PrimaryBooks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +26,7 @@ const App: React.FC = () => {
               <Route path="/books" element={<Books />} />
               <Route path="/secondary-books" element={<SecondaryBooks />} />
               <Route path="/kg-nursery-books" element={<SecondaryBooks />} />
-              <Route path="/primary-books" element={<SecondaryBooks />} />
+              <Route path="/primary-books" element={<PrimaryBooks />} />
               <Route path="/higher-secondary-books" element={<SecondaryBooks />} />
               <Route path="/college-books" element={<SecondaryBooks />} />
               <Route path="*" element={<NotFound />} />
