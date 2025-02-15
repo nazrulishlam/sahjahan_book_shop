@@ -2,7 +2,7 @@
 import React from "react";
 import { BookOpen, Search, Home, BookText, Phone, Info, PartyPopper } from "lucide-react";
 import { Button } from "./ui/button";
-import { NavBar } from "./ui/tubelight-navbar";
+import { AnimeNavBar } from "./ui/anime-navbar";
 
 const Navbar = () => {
   const navItems = [
@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <NavBar items={navItems} className="mt-0" />
+      <AnimeNavBar items={navItems} defaultActive="Home" />
     </nav>
   );
 };
