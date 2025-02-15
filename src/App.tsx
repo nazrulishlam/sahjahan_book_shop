@@ -12,6 +12,13 @@ import PrimaryBooks from "./pages/PrimaryBooks";
 import KgNurseryBooks from "./pages/KgNurseryBooks";
 import HigherSecondaryBooks from "./pages/HigherSecondaryBooks";
 import CollegeBooks from "./pages/CollegeBooks";
+import VocationalBooks from "./pages/VocationalBooks";
+import DElEdBooks from "./pages/DElEdBooks";
+import BEdBooks from "./pages/BEdBooks";
+import CompetitiveBooks from "./pages/CompetitiveBooks";
+import Biography from "./pages/Biography";
+import StoryBooks from "./pages/StoryBooks";
+import Dictionary from "./pages/Dictionary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +39,13 @@ const App: React.FC = () => {
               <Route path="/primary-books" element={<PrimaryBooks />} />
               <Route path="/higher-secondary-books" element={<HigherSecondaryBooks />} />
               <Route path="/college-books" element={<CollegeBooks />} />
+              <Route path="/vocational-books" element={<VocationalBooks />} />
+              <Route path="/d-el-ed-books" element={<DElEdBooks />} />
+              <Route path="/b-ed-books" element={<BEdBooks />} />
+              <Route path="/competitive-books" element={<CompetitiveBooks />} />
+              <Route path="/biography" element={<Biography />} />
+              <Route path="/story-books" element={<StoryBooks />} />
+              <Route path="/dictionary" element={<Dictionary />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
