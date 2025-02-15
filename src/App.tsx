@@ -9,6 +9,9 @@ import Index from "./pages/Index";
 import Books from "./pages/Books";
 import SecondaryBooks from "./pages/SecondaryBooks";
 import PrimaryBooks from "./pages/PrimaryBooks";
+import KgNurseryBooks from "./pages/KgNurseryBooks";
+import HigherSecondaryBooks from "./pages/HigherSecondaryBooks";
+import CollegeBooks from "./pages/CollegeBooks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,10 +28,10 @@ const App: React.FC = () => {
               <Route path="/" element={<Index />} />
               <Route path="/books" element={<Books />} />
               <Route path="/secondary-books" element={<SecondaryBooks />} />
-              <Route path="/kg-nursery-books" element={<SecondaryBooks />} />
+              <Route path="/kg-nursery-books" element={<KgNurseryBooks />} />
               <Route path="/primary-books" element={<PrimaryBooks />} />
-              <Route path="/higher-secondary-books" element={<SecondaryBooks />} />
-              <Route path="/college-books" element={<SecondaryBooks />} />
+              <Route path="/higher-secondary-books" element={<HigherSecondaryBooks />} />
+              <Route path="/college-books" element={<CollegeBooks />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

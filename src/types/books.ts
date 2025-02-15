@@ -9,4 +9,9 @@ export interface Book {
   price: number;
   coverImage: string;
   description: string;
+  ageGroup?: string;
+  stream?: string;
+  board?: string;
+  course?: string;
+  semester?: string;
 }
