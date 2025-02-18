@@ -1,79 +1,106 @@
+
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Badge } from "./ui/badge";
 
 const categories = [
   {
     title: "KG Nursery Books",
     description: "Educational materials for kindergarten and nursery students",
     image: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
-    path: "/kg-nursery-books"
+    path: "/kg-nursery-books",
+    bookCount: 150,
+    size: "Small-format picture books"
   },
   {
     title: "Primary Books",
     description: "Books for primary school education",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
-    path: "/primary-books"
+    path: "/primary-books",
+    bookCount: 300,
+    size: "Standard textbook format"
   },
   {
     title: "Secondary Books",
     description: "Educational materials for secondary school students",
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8",
-    path: "/secondary-books"
+    path: "/secondary-books",
+    bookCount: 250,
+    size: "Standard academic size"
   },
   {
     title: "Higher Secondary",
     description: "Books for higher secondary education",
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6",
-    path: "/higher-secondary-books"
+    path: "/higher-secondary-books",
+    bookCount: 200,
+    size: "Large format textbooks"
   },
   {
     title: "College Books",
     description: "Academic books for college students",
     image: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7",
-    path: "/college-books"
+    path: "/college-books",
+    bookCount: 400,
+    size: "Professional format"
   },
   {
     title: "Vocational Books",
     description: "Books for vocational training and skills development",
     image: "https://images.unsplash.com/photo-1473221326025-9183b464bb7e",
-    path: "/vocational-books"
+    path: "/vocational-books",
+    bookCount: 180,
+    size: "Mixed formats"
   },
   {
     title: "D.El.Ed Books",
     description: "Resources for Diploma in Elementary Education",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-    path: "/d-el-ed-books"
+    path: "/d-el-ed-books",
+    bookCount: 120,
+    size: "Standard academic size"
   },
   {
     title: "B.Ed Books",
     description: "Materials for Bachelor of Education students",
     image: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7",
-    path: "/b-ed-books"
+    path: "/b-ed-books",
+    bookCount: 150,
+    size: "Professional format"
   },
   {
     title: "Competitive Books",
     description: "Study materials for competitive examinations",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    path: "/competitive-books"
+    path: "/competitive-books",
+    bookCount: 280,
+    size: "Standard study material size"
   },
   {
     title: "Biography",
     description: "Life stories of influential people",
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
-    path: "/biography"
+    path: "/biography",
+    bookCount: 100,
+    size: "Standard book format"
   },
   {
     title: "Story Books",
     description: "Collection of engaging stories and novels",
     image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901",
-    path: "/story-books"
+    path: "/story-books",
+    bookCount: 350,
+    size: "Various sizes available"
   },
   {
     title: "Dictionary",
     description: "Comprehensive language reference books",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
-    path: "/dictionary"
+    path: "/dictionary",
+    bookCount: 50,
+    size: "Reference book format"
   }
 ];
 
@@ -83,28 +110,43 @@ const BookCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-bookstore-navy mb-8">Our Book Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category) => (
-            <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-              <div className="aspect-w-16 aspect-h-9">
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="object-cover w-full h-48"
-                />
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{category.title}</h3>
-                <p className="text-bookstore-text mb-4 flex-grow">{category.description}</p>
-                <Button 
-                  className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto"
-                  asChild
-                >
-                  <Link to={category.path}>
-                    Browse Category
-                  </Link>
-                </Button>
-              </div>
-            </Card>
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
+                <div className="aspect-w-16 aspect-h-9">
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="object-cover w-full h-48"
+                  />
+                </div>
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{category.title}</h3>
+                  <p className="text-bookstore-text mb-4 flex-grow">{category.description}</p>
+                  <div className="space-y-2 mb-4">
+                    <Badge variant="secondary" className="w-full justify-center">
+                      {category.bookCount} Books Available
+                    </Badge>
+                    <Badge variant="outline" className="w-full justify-center">
+                      {category.size}
+                    </Badge>
+                  </div>
+                  <Button 
+                    className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto"
+                    asChild
+                  >
+                    <Link to={category.path}>
+                      Browse Category
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

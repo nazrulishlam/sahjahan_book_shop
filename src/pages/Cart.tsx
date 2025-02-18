@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -7,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { 
-  WhatsApp,
+  MessageSquare,
   ShoppingBag,
   MapPin,
   Phone,
@@ -151,7 +150,7 @@ Total: ₹2499`;
                 onClick={handleWhatsAppOrder}
                 className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-lg"
               >
-                <WhatsApp className="w-6 h-6 mr-2" />
+                <MessageSquare className="w-6 h-6 mr-2" />
                 Order via WhatsApp
               </Button>
             </motion.div>
