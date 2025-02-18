@@ -19,8 +19,6 @@ import CompetitiveBooks from "./pages/CompetitiveBooks";
 import Biography from "./pages/Biography";
 import StoryBooks from "./pages/StoryBooks";
 import Dictionary from "./pages/Dictionary";
-import FestivalOffers from "./pages/FestivalOffers";
-import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,8 +46,6 @@ const App: React.FC = () => {
               <Route path="/biography" element={<Biography />} />
               <Route path="/story-books" element={<StoryBooks />} />
               <Route path="/dictionary" element={<Dictionary />} />
-              <Route path="/festival-offers" element={<FestivalOffers />} />
-              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
