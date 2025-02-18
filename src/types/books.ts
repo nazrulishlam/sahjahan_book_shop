@@ -7,6 +7,7 @@ export interface Book {
   subject?: string;
   category: string;
   price: number;
+  originalPrice?: number;
   coverImage: string;
   description: string;
   ageGroup?: string;
@@ -14,19 +15,19 @@ export interface Book {
   board?: string;
   course?: string;
   semester?: string;
-  // New properties for Dictionary
+  // Dictionary properties
   language?: string;
   dictionaryType?: string;
-  // New properties for Biography
+  // Biography properties
   biographyType?: string;
   era?: string;
-  // New properties for Story Books
+  // Story Books properties
   genre?: string;
-  // New properties for Vocational Books
+  // Vocational Books properties
   trade?: string;
   level?: string;
-  // New properties for Competitive Books
+  // Competitive Books properties
   examType?: string;
-  // New properties for D.El.Ed Books
+  // D.El.Ed Books properties
   year?: string;
 }
