@@ -1,3 +1,4 @@
+
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
@@ -79,24 +80,24 @@ const categories = [
 
 const BookCategories = () => {
   return (
-    <section id="books" className="py-16 bg-bookstore-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-bookstore-navy mb-8">Our Book Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section id="books" className="py-12 bg-bookstore-cream">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-bookstore-navy mb-6">Our Book Categories</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {categories.map((category) => (
             <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
               <div className="aspect-w-16 aspect-h-9">
                 <img
                   src={category.image}
                   alt={category.title}
-                  className="object-cover w-full h-48"
+                  className="object-cover w-full h-32"
                 />
               </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{category.title}</h3>
-                <p className="text-bookstore-text mb-4 flex-grow">{category.description}</p>
+              <div className="p-3 flex flex-col flex-grow">
+                <h3 className="text-sm font-semibold text-bookstore-navy mb-1">{category.title}</h3>
+                <p className="text-xs text-bookstore-text mb-2 flex-grow line-clamp-2">{category.description}</p>
                 <Button 
-                  className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto"
+                  className="w-full bg-bookstore-navy hover:bg-bookstore-navy/90 mt-auto text-xs py-1"
                   asChild
                 >
                   <Link to={category.path}>
