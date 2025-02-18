@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { books } from '@/data/books';
 import { Book } from '@/types/books';
+import { MessageSquare } from 'lucide-react';
 
 const VocationalBooks = () => {
   const [selectedTrade, setSelectedTrade] = useState<string>('');
@@ -49,7 +50,7 @@ const VocationalBooks = () => {
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
       <main className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-4xl font-bold text-bookstore-navy mb-8">Vocational Books</h1>
           
           <div className="bg-white p-6 rounded-lg shadow-md mb-8">
@@ -86,21 +87,21 @@ const VocationalBooks = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {filteredBooks.map((book) => (
               <Card key={book.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-w-16 aspect-h-9">
                   <img
                     src={book.coverImage}
                     alt={book.title}
-                    className="object-cover w-full h-48"
+                    className="object-cover w-full h-32"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold text-bookstore-navy mb-2">{book.title}</h3>
-                  <p className="text-sm text-gray-600 mb-2">By {book.author}</p>
-                  <p className="text-lg font-bold text-bookstore-navy mt-2">₹{book.price}</p>
-                  <Button className="w-full mt-4">Add to Cart</Button>
+                <div className="p-3">
+                  <h3 className="text-sm font-semibold text-bookstore-navy mb-1 line-clamp-1">{book.title}</h3>
+                  <p className="text-xs text-gray-600 mb-1 line-clamp-1">By {book.author}</p>
+                  <p className="text-sm font-bold text-bookstore-navy mb-2">₹{book.price}</p>
+                  <Button className="w-full text-xs py-1">Add to Cart</Button>
                 </div>
               </Card>
             ))}
