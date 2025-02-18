@@ -8,32 +8,13 @@ import Footer from '@/components/Footer';
 import { LampContainer } from '@/components/ui/lamp';
 import { Button } from '@/components/ui/button';
 import { BookPlus } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 const Books = () => {
-  const classes = ["V", "VI", "VII", "VIII", "IX", "X"];
-  const subjects = [
-    "Mathematics",
-    "Science",
-    "English",
-    "Hindi",
-    "Social Studies",
-    "Bengali",
-    "Computer Science",
-  ];
-  const categories = ["Text Books", "Sahayika"];
-
   return (
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
       <main>
-        <div className="pt-28"> {/* Increased top padding */}
+        <div className="pt-28">
           <LampContainer>
             <motion.h1
               initial={{ opacity: 0.5, y: 100 }}
@@ -82,61 +63,6 @@ const Books = () => {
               </Button>
             </motion.div>
           </LampContainer>
-        </div>
-
-        {/* Secondary Books Search Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-bookstore-navy mb-6">Secondary Books Search</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Class</label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Class" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {classes.map((cls) => (
-                      <SelectItem key={cls} value={cls}>
-                        Class {cls}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Subject" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {subjects.map((subject) => (
-                      <SelectItem key={subject} value={subject}>
-                        {subject}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Category" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {categories.map((category) => (
-                      <SelectItem key={category} value={category}>
-                        {category}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            <Button className="mt-6 w-full">Search Books</Button>
-          </div>
         </div>
 
         <BookCategories />
