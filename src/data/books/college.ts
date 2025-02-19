@@ -10,6 +10,7 @@ export const collegeBooks: Book[] = [
     subject: 'Computer Science',
     category: 'Text Books',
     price: 899,
+    originalPrice: 999,
     coverImage: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4',
     description: 'Comprehensive guide to computer science fundamentals'
   }

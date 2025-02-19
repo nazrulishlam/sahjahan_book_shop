@@ -8,6 +8,7 @@ export const storyBooks: Book[] = [
     author: 'Devdutt Pattanaik',
     category: 'Story Books',
     price: 299,
+    originalPrice: 345,
     coverImage: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1',
     description: 'Collection of fascinating Indian mythological stories'
   },
@@ -17,6 +18,7 @@ export const storyBooks: Book[] = [
     author: 'Classic Publications',
     category: 'Story Books',
     price: 199,
+    originalPrice: 245,
     coverImage: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901',
     description: 'Moral stories from Panchatantra'
   }

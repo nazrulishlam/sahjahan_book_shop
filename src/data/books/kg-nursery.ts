@@ -11,6 +11,7 @@ export const kgNurseryBooks: Book[] = [
     category: 'Basic Learning',
     ageGroup: '3-4 years',
     price: 199,
+    originalPrice: 249,
     coverImage: '/images/books/kg-nursery/my-first-abc.jpg',
     description: 'A colorful and engaging ABC book designed specifically for kindergarten students, featuring large letters, fun illustrations, and simple words to help children learn the alphabet.'
   }

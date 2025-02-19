@@ -10,6 +10,7 @@ export const primaryBooks: Book[] = [
     subject: 'English',
     category: 'Text Books',
     price: 299,
+    originalPrice: 345,
     coverImage: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1',
     description: 'Primary level English textbook'
   }

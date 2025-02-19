@@ -8,6 +8,7 @@ export const vocationalBooks: Book[] = [
     author: 'Technical Board',
     category: 'Vocational Books',
     price: 399,
+    originalPrice: 450,
     coverImage: 'https://images.unsplash.com/photo-1473221326025-9183b464bb7e',
     description: 'Complete guide for ITI Electrician trade students'
   },
@@ -17,6 +18,7 @@ export const vocationalBooks: Book[] = [
     author: 'Hospitality Institute',
     category: 'Vocational Books',
     price: 499,
+    originalPrice: 575,
     coverImage: 'https://images.unsplash.com/photo-1582719508461-905c673771fd',
     description: 'Essential guide for hotel management students'
   }

@@ -10,6 +10,7 @@ export const secondaryBooks: Book[] = [
     subject: 'Mathematics',
     category: 'Text Books',
     price: 450,
+    originalPrice: 520,
     coverImage: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',
     description: 'Comprehensive mathematics textbook for class 10 students'
   }

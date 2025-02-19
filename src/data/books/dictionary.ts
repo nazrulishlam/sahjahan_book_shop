@@ -8,6 +8,7 @@ export const dictionaryBooks: Book[] = [
     author: 'Oxford Press',
     category: 'Dictionary',
     price: 799,
+    originalPrice: 899,
     coverImage: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570',
     description: 'Comprehensive English language dictionary'
   },
@@ -17,6 +18,7 @@ export const dictionaryBooks: Book[] = [
     author: 'Rajpal & Sons',
     category: 'Dictionary',
     price: 449,
+    originalPrice: 499,
     coverImage: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d',
     description: 'Complete Hindi to English dictionary'
   }
