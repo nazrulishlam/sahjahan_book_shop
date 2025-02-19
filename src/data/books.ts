@@ -1,6 +1,19 @@
 import { Book } from '../types/books';
 
 export const books: Book[] = [
+  // KG Nursery Books
+  {
+    id: '5',
+    title: 'My First ABC Book',
+    author: 'Learning Press',
+    class: 'KG',
+    subject: 'English',
+    category: 'Basic Learning',
+    ageGroup: '3-4 years',
+    price: 199,
+    coverImage: '/images/books/kg-nursery/my-first-abc.jpg',
+    description: 'A colorful and engaging ABC book designed specifically for kindergarten students, featuring large letters, fun illustrations, and simple words to help children learn the alphabet.'
+  },
   // Secondary Books
   {
     id: '1',
@@ -24,18 +37,6 @@ export const books: Book[] = [
     price: 299,
     coverImage: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1',
     description: 'Primary level English textbook'
-  },
-  // KG Nursery Books
-  {
-    id: '5',
-    title: 'My First ABC Book',
-    author: 'Learning Press',
-    class: 'KG',
-    subject: 'English',
-    category: 'Text Books',
-    price: 199,
-    coverImage: 'https://images.unsplash.com/photo-1512820790803-83ca734da794',
-    description: 'Colorful ABC book for kindergarten students'
   },
   // Higher Secondary Books
   {
