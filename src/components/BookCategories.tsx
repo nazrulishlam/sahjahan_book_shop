@@ -75,6 +75,61 @@ const categories = [
     description: "Comprehensive language reference books",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
     path: "/dictionary"
+  },
+  // Adding the new categories
+  {
+    title: "English Grammar",
+    description: "Books on English grammar rules and usage",
+    image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d",
+    path: "/english-grammar"
+  },
+  {
+    title: "English Literature",
+    description: "Classic and contemporary English literary works",
+    image: "https://images.unsplash.com/photo-1463320726281-696a485928c7",
+    path: "/english-literature"
+  },
+  {
+    title: "Programming Books",
+    description: "Books on various programming languages and software development",
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea",
+    path: "/programming-books"
+  },
+  {
+    title: "Self Help Books",
+    description: "Books focused on personal development and improvement",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
+    path: "/self-help-books"
+  },
+  {
+    title: "Technical Books",
+    description: "Books covering various technical subjects and engineering",
+    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5",
+    path: "/technical-books"
+  },
+  {
+    title: "Children Books",
+    description: "Books specially designed for children of all ages",
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    path: "/children-books"
+  },
+  {
+    title: "Indian Economics",
+    description: "Books about Indian economic systems and policies",
+    image: "https://images.unsplash.com/photo-1638439430466-b9d7cf30d531",
+    path: "/indian-economics"
+  },
+  {
+    title: "Indian Politics",
+    description: "Books covering Indian political history and current affairs",
+    image: "/images/books/catagory_fornt/Indian_Economics.jpg",
+    path: "/indian-politics"
+  },
+  {
+    title: "Special Edition",
+    description: "Limited and special edition books across various genres",
+    image: "https://images.unsplash.com/photo-1535398089889-dd807df1dfaa",
+    path: "/special-edition"
   }
 ];
 

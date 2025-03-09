@@ -1,3 +1,4 @@
+
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -16,30 +17,30 @@ const ContactSection = () => {
               or use our contact information.
             </p>
             <div className="space-y-4">
-              <Card className="p-4 flex items-start space-x-4">
+              <Card className="p-4 flex items-start space-x-4 hover:shadow-lg transition-all">
                 <MapPin className="h-6 w-6 text-bookstore-navy" />
                 <div>
                   <h3 className="font-semibold text-bookstore-navy">Address</h3>
                   <p className="text-bookstore-text">Joypur Road, Near Water Tank, Pandua, Hooghly</p>
                 </div>
               </Card>
-              <Card className="p-4 flex items-start space-x-4">
+              <Card className="p-4 flex items-start space-x-4 hover:shadow-lg transition-all">
                 <Phone className="h-6 w-6 text-bookstore-navy" />
                 <div>
                   <h3 className="font-semibold text-bookstore-navy">Phone</h3>
-                  <p className="text-bookstore-text">+91 1234567890</p>
+                  <p className="text-bookstore-text">+91 9475063722</p>
                 </div>
               </Card>
-              <Card className="p-4 flex items-start space-x-4">
+              <Card className="p-4 flex items-start space-x-4 hover:shadow-lg transition-all">
                 <Mail className="h-6 w-6 text-bookstore-navy" />
                 <div>
                   <h3 className="font-semibold text-bookstore-navy">Email</h3>
-                  <p className="text-bookstore-text">contact@sahjahanbooks.com</p>
+                  <p className="text-bookstore-text">nazrulpandua@gmail.com</p>
                 </div>
               </Card>
             </div>
           </div>
-          <Card className="p-6">
+          <Card className="p-6 hover:shadow-xl transition-shadow">
             <form className="space-y-4">
               <div>
                 <Input placeholder="Your Name" className="bg-white" />

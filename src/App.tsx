@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -19,7 +18,11 @@ import CompetitiveBooks from "./pages/CompetitiveBooks";
 import Biography from "./pages/Biography";
 import StoryBooks from "./pages/StoryBooks";
 import Dictionary from "./pages/Dictionary";
+import FestivalOffered from "./pages/FestivalOffered";
+import RequestBook from "./pages/RequestBook";
+import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +49,10 @@ const App: React.FC = () => {
               <Route path="/biography" element={<Biography />} />
               <Route path="/story-books" element={<StoryBooks />} />
               <Route path="/dictionary" element={<Dictionary />} />
+              <Route path="/festival" element={<FestivalOffered />} />
+              <Route path="/request" element={<RequestBook />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

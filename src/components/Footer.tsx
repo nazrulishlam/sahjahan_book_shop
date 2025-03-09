@@ -1,3 +1,4 @@
+
 import { BookOpen, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -81,14 +82,25 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Opening Hours</h3>
             <ul className="space-y-2 text-bookstore-beige">
-              <li>Monday - Saturday</li>
+              <li>Saturday - Thursday</li>
               <li>10:00 AM - 8:00 PM</li>
-              <li>Sunday: Closed</li>
+              <li>Friday: Closed</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-bookstore-beige">
-          <p>&copy; 2024 Sahjahan Book House. All rights reserved.</p>
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-bookstore-beige">&copy; 2024 Sahjahan Book House. All rights reserved.</p>
+          <p className="mt-2">
+            Designed & Developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/ritamjash"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gradient-primary font-semibold hover:text-[#D946EF] transition-colors duration-300"
+            >
+              Ritam Jash
+            </a>
+          </p>
         </div>
       </div>
     </footer>

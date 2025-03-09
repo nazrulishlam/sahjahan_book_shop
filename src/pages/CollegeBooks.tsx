@@ -19,7 +19,7 @@ const CollegeBooks = () => {
   const [selectedSemester, setSelectedSemester] = useState<string>('');
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [filteredBooks, setFilteredBooks] = useState<Book[]>(
-    books.filter(book => book.class === 'UG' || book.class === 'PG')
+    books.filter(book => book.class === 'UG' || book.class === 'PG' || book.class === 'Degree')
   );
 
   const courses = [
@@ -53,7 +53,8 @@ const CollegeBooks = () => {
     "Chemistry",
     "Economics",
     "Management",
-    "Literature"
+    "Literature",
+    "Geography",
   ];
 
   const handleSearch = () => {
@@ -61,7 +62,7 @@ const CollegeBooks = () => {
       const matchCourse = !selectedCourse || book.course === selectedCourse;
       const matchSemester = !selectedSemester || book.semester === selectedSemester;
       const matchSubject = !selectedSubject || book.subject === selectedSubject;
-      const isCollegeBook = book.class === 'UG' || book.class === 'PG';
+      const isCollegeBook = book.class === 'UG' || book.class === 'PG' || book.class === 'Degree';
       return matchCourse && matchSemester && matchSubject && isCollegeBook;
     });
     setFilteredBooks(filtered);

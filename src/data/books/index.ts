@@ -10,6 +10,7 @@ import { bEdBooks } from './bed';
 import { biographyBooks } from './biography';
 import { storyBooks } from './story';
 import { dictionaryBooks } from './dictionary';
+import { competitiveBooks } from './competitive';
 import { Book } from '@/types/books';
 
 export const books: Book[] = [
@@ -23,7 +24,8 @@ export const books: Book[] = [
   ...bEdBooks,
   ...biographyBooks,
   ...storyBooks,
-  ...dictionaryBooks
+  ...dictionaryBooks,
+  ...competitiveBooks
 ];
 
 export {
@@ -37,5 +39,6 @@ export {
   bEdBooks,
   biographyBooks,
   storyBooks,
-  dictionaryBooks
+  dictionaryBooks,
+  competitiveBooks
 };
