@@ -12,33 +12,158 @@ Sahjahan Book Shop is a web application for browsing and purchasing books across
 
 ## Project Structure
 ```
-ritam-jash-sahjahan_book_shop/
-├── README.md
-├── components.json
-├── eslint.config.js
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.ts
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-├── vite.config.ts
-├── public/
-│   └── images/
-│       └── books/
-├── src/
-│   ├── App.css
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   ├── vite-env.d.ts
-│   ├── components/
-│   ├── data/
-│   ├── hooks/
-│   ├── lib/
-│   ├── pages/
-│   └── types/
+Directory structure:
+└── ritam-jash-sahjahan_book_shop/
+    ├── README.md
+    ├── components.json
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── postcss.config.js
+    ├── tailwind.config.ts
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    ├── vite.config.ts
+    ├── public/
+    │   └── images/
+    │       └── books/
+    │           ├── README.md
+    │           ├── bed/
+    │           ├── catagory_fornt/
+    │           ├── class_nine/
+    │           │   ├── Arabic/
+    │           │   ├── Bengali/
+    │           │   ├── Computer_Science/
+    │           │   ├── English/
+    │           │   ├── Geography/
+    │           │   ├── History/
+    │           │   ├── Life_Science/
+    │           │   ├── Mathematics/
+    │           │   ├── Physical_Science/
+    │           │   └── Prashna_Bichitra/
+    │           ├── degree/
+    │           ├── deled/
+    │           ├── engineering/
+    │           ├── iti/
+    │           ├── kg-nursery/
+    │           └── secondary/
+    │               └── Grammar/
+    └── src/
+        ├── App.css
+        ├── App.tsx
+        ├── index.css
+        ├── main.tsx
+        ├── vite-env.d.ts
+        ├── components/
+        │   ├── AboutSection.tsx
+        │   ├── BookCategories.tsx
+        │   ├── ContactSection.tsx
+        │   ├── EstablishedDate.tsx
+        │   ├── FlippingBook.tsx
+        │   ├── Footer.tsx
+        │   ├── Hero.tsx
+        │   ├── Navbar.tsx
+        │   ├── TestimonialsSection.tsx
+        │   └── ui/
+        │       ├── accordion.tsx
+        │       ├── alert-dialog.tsx
+        │       ├── alert.tsx
+        │       ├── anime-navbar.tsx
+        │       ├── aspect-ratio.tsx
+        │       ├── avatar.tsx
+        │       ├── badge.tsx
+        │       ├── breadcrumb.tsx
+        │       ├── button.tsx
+        │       ├── calendar.tsx
+        │       ├── card.tsx
+        │       ├── carousel.tsx
+        │       ├── chart.tsx
+        │       ├── checkbox.tsx
+        │       ├── collapsible.tsx
+        │       ├── command.tsx
+        │       ├── context-menu.tsx
+        │       ├── dialog.tsx
+        │       ├── drawer.tsx
+        │       ├── dropdown-menu.tsx
+        │       ├── form.tsx
+        │       ├── hover-card.tsx
+        │       ├── input-otp.tsx
+        │       ├── input.tsx
+        │       ├── label.tsx
+        │       ├── lamp.tsx
+        │       ├── menubar.tsx
+        │       ├── navigation-menu.tsx
+        │       ├── pagination.tsx
+        │       ├── popover.tsx
+        │       ├── progress.tsx
+        │       ├── radio-group.tsx
+        │       ├── resizable.tsx
+        │       ├── scroll-area.tsx
+        │       ├── select.tsx
+        │       ├── separator.tsx
+        │       ├── sheet.tsx
+        │       ├── sidebar.tsx
+        │       ├── skeleton.tsx
+        │       ├── slider.tsx
+        │       ├── sonner.tsx
+        │       ├── switch.tsx
+        │       ├── table.tsx
+        │       ├── tabs.tsx
+        │       ├── textarea.tsx
+        │       ├── toast.tsx
+        │       ├── toaster.tsx
+        │       ├── toggle-group.tsx
+        │       ├── toggle.tsx
+        │       ├── tooltip.tsx
+        │       ├── tubelight-navbar.tsx
+        │       └── use-toast.ts
+        ├── data/
+        │   └── books/
+        │       ├── bed.ts
+        │       ├── biography.ts
+        │       ├── college.ts
+        │       ├── competitive.ts
+        │       ├── deled.ts
+        │       ├── dictionary.ts
+        │       ├── engineering.ts
+        │       ├── higher-secondary.ts
+        │       ├── index.ts
+        │       ├── kg-nursery.ts
+        │       ├── primary.ts
+        │       ├── secondary.ts
+        │       ├── story.ts
+        │       └── vocational.ts
+        ├── hooks/
+        │   ├── use-mobile.tsx
+        │   └── use-toast.ts
+        ├── lib/
+        │   └── utils.ts
+        ├── pages/
+        │   ├── AboutUs.tsx
+        │   ├── BEdBooks.tsx
+        │   ├── Biography.tsx
+        │   ├── Books.tsx
+        │   ├── Cart.tsx
+        │   ├── CollegeBooks.tsx
+        │   ├── CompetitiveBooks.tsx
+        │   ├── Contact.tsx
+        │   ├── DElEdBooks.tsx
+        │   ├── Dictionary.tsx
+        │   ├── EngineeringBooks.tsx
+        │   ├── FestivalOffered.tsx
+        │   ├── HigherSecondaryBooks.tsx
+        │   ├── Index.tsx
+        │   ├── KgNurseryBooks.tsx
+        │   ├── NotFound.tsx
+        │   ├── PrimaryBooks.tsx
+        │   ├── RequestBook.tsx
+        │   ├── SecondaryBooks.tsx
+        │   ├── StoryBooks.tsx
+        │   └── VocationalBooks.tsx
+        └── types/
+            └── books.ts
+
 ```
 
 ## Installation and Setup
