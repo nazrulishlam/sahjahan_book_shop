@@ -1,69 +1,75 @@
-# Welcome to your Lovable project
+# Sahjahan Book Shop
 
-## Project info
+## Project Overview
+Sahjahan Book Shop is a web application for browsing and purchasing books across various categories. The project is built using modern web technologies to ensure a seamless and efficient user experience.
 
-**URL**: https://lovable.dev/projects/929b8943-7204-4ba0-b148-1dc83c465a2c
+## Technologies Used
+- **Vite** - Fast build tool for modern web applications
+- **TypeScript** - Strongly typed JavaScript for maintainable code
+- **React** - Frontend framework for building user interfaces
+- **ShadCN UI** - UI components for a clean and consistent design
+- **Tailwind CSS** - Utility-first CSS framework for styling
 
-## How can I edit this code?
+## Project Structure
+```
+ritam-jash-sahjahan_book_shop/
+├── README.md
+├── components.json
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   └── images/
+│       └── books/
+├── src/
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── lib/
+│   ├── pages/
+│   └── types/
+```
 
-There are several ways of editing your application.
+## Installation and Setup
+To set up the project locally, follow these steps:
 
-**Use Lovable**
+### Prerequisites
+Ensure that you have **Node.js** and **npm** installed on your system. You can install Node.js from [nodejs.org](https://nodejs.org/).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/929b8943-7204-4ba0-b148-1dc83c465a2c) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Steps
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone https://github.com/Ritam-jash/sahjahan_book_shop.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate into the project directory
+cd sahjahan_book_shop
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173/` (or a different port depending on availability).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+## License
+This project is open-source and available under the **MIT License**.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact
+For any queries or contributions, feel free to reach out:
+- **GitHub**: [Ritam Jash](https://github.com/Ritam-jash)
+- **LinkedIn**: [Ritam Jash](https://www.linkedin.com/in/ritam-jash)
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/929b8943-7204-4ba0-b148-1dc83c465a2c) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
