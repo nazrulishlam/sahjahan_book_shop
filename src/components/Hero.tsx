@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -26,18 +27,39 @@ const Hero = () => {
             of academic books, novels, and more.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-bookstore-beige text-bookstore-navy hover:bg-white">
-              Browse Books
+            {/* <Button className="bg-bookstore-beige text-bookstore-navy hover:bg-white">
+              Browse Books */}
+            
+            <Button
+              className="bg-bookstore-beige text-bookstore-navy hover:bg-white"
+              asChild
+            >
+              <Link to="/books">Browse Books</Link>
             </Button>
-            <Button variant="outline" className="text-bookstore-navy bg-white border-white hover:bg-bookstore-beige">
-              Contact Us
+            {/* <Button variant="outline" className="text-bookstore-navy bg-white border-white hover:bg-bookstore-beige">
+              Contact Us */}
+            
+            <Button
+              variant="outline"
+              className="text-bookstore-navy bg-white border-white hover:bg-bookstore-beige"
+              asChild
+            >
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
           <div className="flex flex-col sm:flex-row gap-6 text-bookstore-beige pt-8">
-            <div className="flex items-center">
+            {/* <div className="flex items-center"> */}
+
+            <Link 
+              to="https://maps.google.com/?q=Sahjahan+Book+House+Pandua"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:text-white transition-colors"
+            >
               <MapPin className="h-5 w-5 mr-2" />
               <span>Joypur Road, Near Water Tank, Pandua, Hooghly</span>
-            </div>
+            {/* </div> */}
+            </Link>
             <div className="flex items-center">
               <Clock className="h-5 w-5 mr-2" />
               <span>Open: 10:00 AM - 8:00 PM</span>
@@ -49,4 +71,5 @@ const Hero = () => {
   );
 };
 
+// export default Hero;
 export default Hero;
