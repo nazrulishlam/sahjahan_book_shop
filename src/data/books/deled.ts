@@ -13,7 +13,7 @@ export const delEdBooks: Book[] = [
     subject: 'Education',
     price: 192,
     originalPrice: 240,
-    coverImage: "/images/books/deled/3045.jpg",
+    coverImage: "/compressed/deled/3045.webp",
     description: 'CC-03 JUNE,2024-25 edition for D.El.Ed students by RITA PUBLICATION'
   },
   {
@@ -24,7 +24,7 @@ export const delEdBooks: Book[] = [
     subject: 'Education',
     price: 216,
     originalPrice: 270,
-    coverImage: "/images/books/deled/3048.jpg",
+    coverImage: "/compressed/deled/3048.webp",
     description: 'CC-03 JUNE,2024 edition for D.El.Ed students by AHELI PUBLISHERS'
   },
   {
@@ -35,7 +35,7 @@ export const delEdBooks: Book[] = [
     subject: 'Education',
     price: 232,
     originalPrice: 290,
-    coverImage: "/images/books/deled/3053.jpg",
+    coverImage: "/compressed/deled/3053.webp",
     description: 'CC-02 2024-25 edition for D.El.Ed students by RITA PUBLICATION'
   },
   {
@@ -46,7 +46,7 @@ export const delEdBooks: Book[] = [
     subject: 'Child Education',
     price: 176,
     originalPrice: 220,
-    coverImage: "/images/books/deled/3033.jpg",
+    coverImage: "/compressed/deled/3033.webp",
     description: 'CC-01 NOV,2024-25 edition for D.El.Ed students by RITA PUBLICATION'
   },
   {
@@ -57,7 +57,7 @@ export const delEdBooks: Book[] = [
     subject: 'English',
     price: 232,
     originalPrice: 290,
-    coverImage: "/images/books/deled/3028.jpg",
+    coverImage: "/compressed/deled/3028.webp",
     description: 'OCT,2024 edition for D.El.Ed students by AHELI PUBLISHERS'
   },
   {
@@ -68,7 +68,7 @@ export const delEdBooks: Book[] = [
     subject: 'English',
     price: 288,
     originalPrice: 360,
-    coverImage: "/images/books/deled/3041.jpg",
+    coverImage: "/compressed/deled/3041.webp",
     description: 'CPS-02 AUG,2024-25 edition for D.El.Ed students by RITA PUBLICATION'
   },
   {
@@ -79,7 +79,7 @@ export const delEdBooks: Book[] = [
     subject: 'Environmental Studies',
     price: 256,
     originalPrice: 320,
-    coverImage: "/images/books/deled/3034.jpg",
+    coverImage: "/compressed/deled/3034.webp",
     description: 'CPS-04 NOV,2024-25 edition for D.El.Ed students by RITA BOOK AGENCY'
   },
   {
@@ -90,7 +90,7 @@ export const delEdBooks: Book[] = [
     subject: 'Mathematics',
     price: 216,
     originalPrice: 270,
-    coverImage: "/images/books/deled/3031.jpg",
+    coverImage: "/compressed/deled/3031.webp",
     description: 'JAN,2024-25 edition for D.El.Ed students by RITA PUBLICATION'
   }
 

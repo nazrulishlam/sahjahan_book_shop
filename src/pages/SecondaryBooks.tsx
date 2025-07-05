@@ -13,13 +13,19 @@ import {
 } from "@/components/ui/select";
 import { secondaryBooks } from '@/data/books';
 import { Book } from '@/types/books';
+import BookDetailsDialog from '@/components/BookDetailsDialog';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const SecondaryBooks = () => {
   const [selectedClass, setSelectedClass] = useState<string>('');
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [filteredBooks, setFilteredBooks] = useState<Book[]>(secondaryBooks);
-
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
   const classes = ["V", "VI", "VII", "VIII", "IX", "X"];
   const subjects = [
     "Mathematics",
@@ -46,7 +52,20 @@ const SecondaryBooks = () => {
     setFilteredBooks(filtered);
   };
 
-  return (
+  const handleBookClick = (book: Book) => {
+    setSelectedBook(book);
+    setIsDialogOpen(true);
+  };
+
+  const handleAddToCart = (e: React.MouseEvent, book: Book) => {
+    e.stopPropagation();
+    addToCart(book);
+    toast({
+      title: "Added to cart!",
+      description: `"${book.title}" has been added to your cart.`,
+    });
+  };
+    return (
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
       <main className="pt-24 pb-16">
@@ -102,13 +121,28 @@ const SecondaryBooks = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {filteredBooks.map((book) => (
-              <Card key={book.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              // <Card key={book.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card 
+              key={book.id} 
+              className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleBookClick(book)}
+              >
                 <div className="aspect-w-16 aspect-h-9">
-                  <img
+                  {/* <img
                     src={book.coverImage}
                     alt={book.title}
                     className="object-cover w-full h-32"
+                  /> */}
+                  <picture>
+                  <source srcSet={book.coverImage} type="image/webp" />
+                  <img
+                    src={book.coverImage.replace('/compressed/', '/images/books/').replace('.webp', '.jpg')}
+                    alt={book.title}
+                    className="object-cover w-full h-32"
+                    loading="lazy"
                   />
+                </picture>
+                
                 </div>
                 <div className="p-3">
                   <h3 className="text-sm font-semibold text-bookstore-navy mb-1 line-clamp-1">{book.title}</h3>
@@ -117,13 +151,24 @@ const SecondaryBooks = () => {
                     <span className="text-xs text-gray-500 line-through">₹{book.originalPrice}</span>
                     <span className="text-sm font-bold text-bookstore-navy">₹{book.price}</span>
                   </div>
-                  <Button className="w-full text-xs py-1">Add to Cart</Button>
+                  {/* <Button className="w-full text-xs py-1">Add to Cart</Button> */}
+                  <Button 
+                    className="w-full text-xs py-1" 
+                    onClick={(e) => handleAddToCart(e, book)}
+                  >
+                    Add to Cart
+                  </Button>
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </main>
+      <BookDetailsDialog
+        book={selectedBook}
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+      />
       <Footer />
     </div>
   );

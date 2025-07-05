@@ -6,6 +6,7 @@ export const primaryBooks: Book[] = [
     id: '4',
     title: 'English Reader - Class V',
     author: 'Oxford Publications',
+    publisher: 'Oxford Publications',
     class: 'V',
     subject: 'English',
     category: 'Text Books',

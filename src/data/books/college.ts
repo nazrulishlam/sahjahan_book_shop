@@ -4,23 +4,23 @@ import { Book } from '@/types/books';
 export const collegeBooks: Book[] = [
 
     // Degree Nutrition Books
-    { id: "732", title: "CLINICAL DIETETICS AND NUTRITION", author: "ANTIA,ABRAHAM", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 692, originalPrice: 865, coverImage: "/images/books/degree/732.jpg", description: "Clinical Dietetics and Nutrition textbook" },
-    { id: "536", title: "FOOD SCIENCE", author: "B. SRILAKSHMI", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 440, originalPrice: 550, coverImage: "/images/books/degree/536.jpg", description: "Food Science textbook" },
-    { id: "535", title: "NUTRITION SCIENCE", author: "B. SRILAKSHMI", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 479, originalPrice: 599, coverImage: "/images/books/degree/535.jpg", description: "Nutrition Science textbook" },
+    { id: "732", title: "CLINICAL DIETETICS AND NUTRITION", author: "ANTIA,ABRAHAM", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 692, originalPrice: 865, coverImage: "/compressed/degree/732.webp", description: "Clinical Dietetics and Nutrition textbook" },
+    { id: "536", title: "FOOD SCIENCE", author: "B. SRILAKSHMI", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 440, originalPrice: 550, coverImage: "/compressed/degree/536.webp", description: "Food Science textbook" },
+    { id: "535", title: "NUTRITION SCIENCE", author: "B. SRILAKSHMI", class: "UG", subject: "Nutrition", category: "TEXT BOOK", price: 479, originalPrice: 599, coverImage: "/compressed/degree/535.webp", description: "Nutrition Science textbook" },
     
     // Degree Zoology Books
-    { id: "517", title: "IGENETICS", author: "PETER J. RUSSELL", class: "UG", subject: "Zoology", category: "TEXT BOOK", price: 776, originalPrice: 970, coverImage: "/images/books/degree/517.jpg", description: "Genetics textbook" },
-    { id: "505", title: "BIOLOGY OF ANIMALS (VOL-1)", author: "GANGULY,SINHA,ADHIKA", class: "UG", subject: "Zoology", category: "TEXT BOOK", price: 796, originalPrice: 995, coverImage: "/images/books/degree/505.jpg", description: "Biology of Animals Vol-1 textbook" },
+    { id: "517", title: "IGENETICS", author: "PETER J. RUSSELL", class: "UG", subject: "Zoology", category: "TEXT BOOK", price: 776, originalPrice: 970, coverImage: "/compressed/degree/517.webp", description: "Genetics textbook" },
+    { id: "505", title: "BIOLOGY OF ANIMALS (VOL-1)", author: "GANGULY,SINHA,ADHIKA", class: "UG", subject: "Zoology", category: "TEXT BOOK", price: 796, originalPrice: 995, coverImage: "/compressed/degree/505.webp", description: "Biology of Animals Vol-1 textbook" },
     
     // Degree Computer Books
-    { id: "568", title: "COMPUTER PROGRAMMING", author: "COMPUTER AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 452, originalPrice: 565, coverImage: "/images/books/degree/568.jpg", description: "Computer Programming textbook" },
-    { id: "569", title: "DATABASE MANAGEMENT", author: "DATABASE AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 500, originalPrice: 625, coverImage: "/images/books/degree/569.jpg", description: "Database Management textbook" },
-    { id: "1279", title: "WEB DEVELOPMENT", author: "WEB AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 319, originalPrice: 399, coverImage: "/images/books/degree/1279.jpg", description: "Web Development textbook" },
-    { id: "571", title: "ALGORITHMS AND DATA STRUCTURES", author: "ALGORITHMS AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 536, originalPrice: 670, coverImage: "/images/books/degree/571.jpg", description: "Algorithms and Data Structures textbook" },
+    { id: "568", title: "COMPUTER PROGRAMMING", author: "COMPUTER AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 452, originalPrice: 565, coverImage: "/compressed/degree/568.webp", description: "Computer Programming textbook" },
+    { id: "569", title: "DATABASE MANAGEMENT", author: "DATABASE AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 500, originalPrice: 625, coverImage: "/compressed/degree/569.webp", description: "Database Management textbook" },
+    { id: "1279", title: "WEB DEVELOPMENT", author: "WEB AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 319, originalPrice: 399, coverImage: "/compressed/degree/1279.webp", description: "Web Development textbook" },
+    { id: "571", title: "ALGORITHMS AND DATA STRUCTURES", author: "ALGORITHMS AUTHOR", class: "UG", subject: "Computer Science", category: "TEXT BOOK", price: 536, originalPrice: 670, coverImage: "/compressed/degree/571.webp", description: "Algorithms and Data Structures textbook" },
     
     // Degree Botany Books
-    { id: "484", title: "A TEXTBOOK OF BOTANY (VOL-4)", author: "BHATTACHARYA,GHOSH", class: "UG", subject: "Botany", category: "TEXT BOOK", price: 668, originalPrice: 835, coverImage: "/images/books/degree/484.jpg", description: "A Textbook of Botany Vol-4" },
-    { id: "486", title: "A TEXTBOOK OF BOTANY (VOL-1)", author: "HAIT,BHATTACHARYA", class: "UG", subject: "Botany", category: "TEXT BOOK", price: 628, originalPrice: 785, coverImage: "/images/books/degree/486.jpg", description: "A Textbook of Botany Vol-1" },
+    { id: "484", title: "A TEXTBOOK OF BOTANY (VOL-4)", author: "BHATTACHARYA,GHOSH", class: "UG", subject: "Botany", category: "TEXT BOOK", price: 668, originalPrice: 835, coverImage: "/compressed/degree/484.webp", description: "A Textbook of Botany Vol-4" },
+    { id: "486", title: "A TEXTBOOK OF BOTANY (VOL-1)", author: "HAIT,BHATTACHARYA", class: "UG", subject: "Botany", category: "TEXT BOOK", price: 628, originalPrice: 785, coverImage: "/compressed/degree/486.webp", description: "A Textbook of Botany Vol-1" },
 
 
     // Physics Books
@@ -33,7 +33,7 @@ export const collegeBooks: Book[] = [
         category: "TEXT BOOK", 
         price: 580, 
         originalPrice: 725, 
-        coverImage: "/images/books/degree/378.jpg", 
+        coverImage: "/compressed/degree/378.webp", 
         description: "Thermal Physics textbook for degree students focusing on heat concepts" 
       },
       { 
@@ -45,7 +45,7 @@ export const collegeBooks: Book[] = [
         category: "TEXT BOOK", 
         price: 628, 
         originalPrice: 785, 
-        coverImage: "/images/books/degree/380.jpg", 
+        coverImage: "/compressed/degree/380.webp", 
         description: "Statistical Mechanics textbook by Techno World" 
       },
       { 
@@ -57,7 +57,7 @@ export const collegeBooks: Book[] = [
         category: "TEXT BOOK", 
         price: 500, 
         originalPrice: 625, 
-        coverImage: "/images/books/degree/401.jpg", 
+        coverImage: "/compressed/degree/401.webp", 
         description: "Classical Mechanics textbook by Himalaya Publishing House" 
       },
       { 
@@ -69,7 +69,7 @@ export const collegeBooks: Book[] = [
         category: "TEXT BOOK", 
         price: 396, 
         originalPrice: 495, 
-        coverImage: "/images/books/degree/402.jpg", 
+        coverImage: "/compressed/degree/402.webp", 
         description: "Classical Mechanics textbook by Pragati Prakashan" 
       },
       { 
@@ -81,7 +81,7 @@ export const collegeBooks: Book[] = [
         category: "TEXT BOOK", 
         price: 396, 
         originalPrice: 495, 
-        coverImage: "/images/books/degree/432.jpg", 
+        coverImage: "/compressed/degree/432.webp", 
         description: "Laboratory Manual of Physics Volume 2 for practical physics" 
       },
 
@@ -96,7 +96,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 280,
     originalPrice: 350,
-    coverImage: "/images/books/degree/236.jpg",
+    coverImage: "/compressed/degree/236.webp",
     description: 'Classical algebra textbook covering fundamental concepts and techniques',
     // publisher: 'LEVANT BOOKS',
     // topic: 'ALGEBRA',
@@ -111,7 +111,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 416,
     originalPrice: 520,
-    coverImage: "/images/books/degree/316.jpg",
+    coverImage: "/compressed/degree/316.webp",
     description: 'Advanced concepts in analytical geometry',
     // publisher: 'U.N. DHUR & SONS',
     // topic: 'GEOMETRY',
@@ -126,7 +126,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 360,
     originalPrice: 450,
-    coverImage: "/images/books/degree/290.jpg",
+    coverImage: "/compressed/degree/290.webp",
     description: 'Comprehensive guide to linear programming and game theory',
     // publisher: 'MOULIK LIBRARY',
     // topic: 'LINEAR PROG',
@@ -141,7 +141,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 420,
     originalPrice: 525,
-    coverImage: "/images/books/degree/271.jpg",
+    coverImage: "/compressed/degree/271.webp",
     description: 'Comprehensive introduction to real analysis',
     // publisher: 'LEVANT BOOKS',
     // topic: 'REAL ANALYSIS',
@@ -156,7 +156,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 372,
     originalPrice: 465,
-    coverImage: "/images/books/degree/251.jpg",
+    coverImage: "/compressed/degree/251.webp",
     description: 'Comprehensive guide to rigid dynamics',
     // publisher: 'NEW CENTRAL',
     // topic: 'RIGID BODY',
@@ -171,7 +171,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 636,
     originalPrice: 795,
-    coverImage: "/images/books/degree/283.jpg",
+    coverImage: "/compressed/degree/283.webp",
     description: 'Comprehensive guide to vector analysis',
     // publisher: 'MCGRAW HILL',
     // topic: 'VECT ANALYSIS',
@@ -186,7 +186,7 @@ export const collegeBooks: Book[] = [
     category: 'TEXT BOOK',
     price: 256,
     originalPrice: 320,
-    coverImage: "/images/books/degree/285.jpg",
+    coverImage: "/compressed/degree/285.webp",
     description: 'Concepts and applications of vector analysis',
     // publisher: 'U.N. DHUR & SONS',
     // topic: 'VECT ANALYSIS',
@@ -204,7 +204,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 256, 
       originalPrice: 320, 
-      coverImage: "/images/books/degree/51.jpg", 
+      coverImage: "/compressed/degree/51.webp", 
       description: 'A comprehensive guide on regional development and planning, published by UDDALOK PUBLISHING HOUSE in MARCH,2023' 
     },
     { 
@@ -216,7 +216,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 304, 
       originalPrice: 380, 
-      coverImage: "/images/books/degree/52.jpg",
+      coverImage: "/compressed/degree/52.webp",
       description: 'An in-depth study of regional planning and development, published by NADIYA PUBLISHERS in APRIL,2023' 
     },
     { 
@@ -228,7 +228,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 540, 
       originalPrice: 675, 
-      coverImage: "/images/books/degree/58.jpg",
+      coverImage: "/compressed/degree/58.webp",
       description: 'A detailed exploration of regional planning and development, published by NABODAY PUBLICATIONS in JAN,2023' 
     },
     { 
@@ -240,7 +240,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 464, 
       originalPrice: 580, 
-      coverImage: "/images/books/degree/47.jpg",
+      coverImage: "/compressed/degree/47.webp",
       description: 'An introduction to economic geography and resource management, published by T.D. PUBLICATION in FEB,2024' 
     },
     { 
@@ -252,7 +252,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 400, 
       originalPrice: 500, 
-      coverImage: "/images/books/degree/159.jpg",
+      coverImage: "/compressed/degree/159.webp",
       description: 'Modern geomorphology science textbook, published by NABODAY PUBLICATIONS in JULY,23-24' 
     },
     { 
@@ -264,7 +264,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 399, 
       originalPrice: 499, 
-      coverImage: "/images/books/degree/429.jpg",
+      coverImage: "/compressed/degree/429.webp",
       description: 'A comprehensive guide on research methodology, methods and techniques, published by NEW AGE INTERNATIONAL in 2024' 
     },
     { 
@@ -276,7 +276,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 448, 
       originalPrice: 560, 
-      coverImage: "/images/books/degree/68.jpg",
+      coverImage: "/compressed/degree/68.webp",
       description: 'Modern weather and climate science textbook, published by NABODAY PUBLICATIONS in 2023-24' 
     },
     { 
@@ -288,7 +288,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 384, 
       originalPrice: 480, 
-      coverImage: "/images/books/degree/39.jpg",
+      coverImage: "/compressed/degree/39.webp",
       description: 'A comprehensive study of human geography, published by NABODAY PUBLICATIONS in 2023-24' 
     },
     { 
@@ -300,7 +300,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 740, 
       originalPrice: 925, 
-      coverImage: "/images/books/degree/194.jpg", 
+      coverImage: "/compressed/degree/194.webp", 
       description: 'Comprehensive guide on remote sensing and geographic information systems, published by OXFORD UNIVERSITY PRESS in 2023' 
     },
     { 
@@ -312,7 +312,7 @@ export const collegeBooks: Book[] = [
       category: 'TEXT BOOK', 
       price: 360, 
       originalPrice: 450, 
-      coverImage: "/images/books/degree/88.jpg",
+      coverImage: "/compressed/degree/88.webp",
       description: 'A study of geographical thought and philosophy, published by NABODAY PUBLICATIONS in 2024-25' 
     },
 
@@ -328,7 +328,7 @@ export const collegeBooks: Book[] = [
     subject: 'Chemistry',
     price: 340,
     originalPrice: 425,
-    coverImage: "/images/books/degree/470.jpg",
+    coverImage: "/compressed/degree/470.webp",
     description: '2022 edition for degree students by TECHNO WORLD in Bio Chemistry'
   },
   {
@@ -340,7 +340,7 @@ export const collegeBooks: Book[] = [
     subject: 'Chemistry',
     price: 476,
     originalPrice: 595,
-    coverImage: "/images/books/degree/436.jpg",
+    coverImage: "/compressed/degree/436.webp",
     description: '2022 edition for degree students by CBS PUBLISHERS in Inorganic Chemistry'
   },
   {
@@ -352,7 +352,7 @@ export const collegeBooks: Book[] = [
     subject: 'Chemistry',
     price: 796,
     originalPrice: 995,
-    coverImage: "/images/books/degree/443.jpg",
+    coverImage: "/compressed/degree/443.webp",
     description: '2022 edition for degree students by NEW CENTRAL in Inorganic Chemistry'
   },
   {
@@ -364,7 +364,7 @@ export const collegeBooks: Book[] = [
     subject: 'Chemistry',
     price: 660,
     originalPrice: 825,
-    coverImage: "/images/books/degree/461.jpg",
+    coverImage: "/compressed/degree/461.webp",
     description: '2024 edition for degree students by LEVANT BOOKS in Physical Chemistry'
   },
 ];

@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "@/contexts/CartContext";
 import Index from "./pages/Index";
 import Books from "./pages/Books";
 import SecondaryBooks from "./pages/SecondaryBooks";
@@ -24,6 +25,7 @@ import RequestBook from "./pages/RequestBook";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +33,7 @@ const App: React.FC = () => {
   return (
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
+        {/* <TooltipProvider>
           <Toaster />
           <Sonner />
           <BrowserRouter>
@@ -58,7 +60,39 @@ const App: React.FC = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
-        </TooltipProvider>
+        </TooltipProvider> */}
+
+        <CartProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/books" element={<Books />} />
+                <Route path="/secondary-books" element={<SecondaryBooks />} />
+                <Route path="/kg-nursery-books" element={<KgNurseryBooks />} />
+                <Route path="/primary-books" element={<PrimaryBooks />} />
+                <Route path="/higher-secondary-books" element={<HigherSecondaryBooks />} />
+                <Route path="/college-books" element={<CollegeBooks />} />
+                <Route path="/vocational-books" element={<VocationalBooks />} />
+                <Route path="/engineering-books" element={<EngineeringBooks />} />
+                <Route path="/d-el-ed-books" element={<DElEdBooks />} />
+                <Route path="/b-ed-books" element={<BEdBooks />} />
+                <Route path="/competitive-books" element={<CompetitiveBooks />} />
+                <Route path="/biography" element={<Biography />} />
+                <Route path="/story-books" element={<StoryBooks />} />
+                <Route path="/dictionary" element={<Dictionary />} />
+                <Route path="/festival" element={<FestivalOffered />} />
+                <Route path="/request" element={<RequestBook />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </CartProvider>
       </QueryClientProvider>
     </React.StrictMode>
   );
