@@ -14,12 +14,18 @@ import {
 import { engineeringBooks } from '@/data/books/engineering';
 import { Book } from '@/types/books';
 import { CircuitBoard, BookOpen } from 'lucide-react';
+import BookDetailsDialog from '@/components/BookDetailsDialog';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const EngineeringBooks = () => {
   const [selectedBranch, setSelectedBranch] = useState<string>('');
   const [selectedSemester, setSelectedSemester] = useState<string>('');
   const [filteredBooks, setFilteredBooks] = useState<Book[]>(engineeringBooks);
-
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
   const branches = [
     "Computer Science",
     "Electronics",
@@ -53,6 +59,19 @@ const EngineeringBooks = () => {
     setFilteredBooks(filtered);
   };
 
+  const handleBookClick = (book: Book) => {
+    setSelectedBook(book);
+    setIsDialogOpen(true);
+  };
+
+  const handleAddToCart = (e: React.MouseEvent, book: Book) => {
+    e.stopPropagation();
+    addToCart(book);
+    toast({
+      title: "Added to cart!",
+      description: `"${book.title}" has been added to your cart.`,
+    });
+  };
   return (
     <div className="min-h-screen bg-bookstore-cream">
       <Navbar />
@@ -97,13 +116,27 @@ const EngineeringBooks = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {filteredBooks.map((book) => (
-              <Card key={book.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              // <Card key={book.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card 
+              key={book.id} 
+              className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleBookClick(book)}
+              >
                 <div className="aspect-w-16 aspect-h-9">
-                  <img
+                  {/* <img
                     src={book.coverImage}
                     alt={book.title}
                     className="object-cover w-full h-32"
+                  /> */}
+                  <picture>
+                  <source srcSet={book.coverImage} type="image/webp" />
+                  <img
+                    src={book.coverImage.replace('/compressed/', '/images/books/').replace('.webp', '.jpg')}
+                    alt={book.title}
+                    className="object-cover w-full h-32"
+                    loading="lazy"
                   />
+                </picture>
                 </div>
                 <div className="p-3">
                   <h3 className="text-sm font-semibold text-bookstore-navy mb-1 line-clamp-1">{book.title}</h3>
@@ -114,8 +147,14 @@ const EngineeringBooks = () => {
                       <p className="text-xs text-gray-500 line-through">₹{book.originalPrice}</p>
                     )}
                   </div>
-                  <Button className="w-full text-xs py-1">
+                  {/* <Button className="w-full text-xs py-1">
                     <BookOpen className="mr-1 h-3 w-3" /> Add to Cart
+                  </Button> */}
+                  <Button 
+                    className="w-full text-xs py-1" 
+                    onClick={(e) => handleAddToCart(e, book)}
+                  >
+                    Add to Cart
                   </Button>
                 </div>
               </Card>
@@ -123,6 +162,11 @@ const EngineeringBooks = () => {
           </div>
         </div>
       </main>
+      <BookDetailsDialog
+        book={selectedBook}
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+      />
       <Footer />
     </div>
   );

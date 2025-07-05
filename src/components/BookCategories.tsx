@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+// import BookDetailsDialog from "./BookDetailsDialog";
+import { Book } from "@/types/books";
+import { books } from "@/data/books";
+import BookDetailsDialog from "./BookDetailsDialog";
 
 const categories = [
   {
@@ -138,13 +143,69 @@ const categories = [
 ];
 
 const BookCategories = () => {
+  // const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+  // const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  // const handleBookClick = (categoryPath: string) => {
+  //   // const categoryBooks = books.filter(book => book.category.toLowerCase() === categoryPath.replace('/', '').replace('-books', ''));
+  //   // if (categoryBooks.length > 0) {
+  //   //   setSelectedBook(categoryBooks[0]);
+  //   //   setIsDialogOpen(true);
+  //       // Extract clean category name from path
+  //       const categoryName = categoryPath.replace('/', '').replace('-books', '');
+    
+  //       // Map common path patterns to actual category names in the data
+  //       const categoryMappings: Record<string, string> = {
+  //         'kg-nursery': 'Basic Learning',
+  //         'primary': 'Text Books',
+  //         'secondary': 'Text Books',
+  //         'higher-secondary': 'Text Books',
+  //         'college': 'Text Books',
+  //         'vocational': 'Vocational Books',
+  //         'd-el-ed': 'D.El.Ed Books',
+  //         'b-ed': 'B.Ed Books',
+  //         'competitive': 'Competitive Books',
+  //         'biography': 'Biography',
+  //         'story': 'Story Books',
+  //         'dictionary': 'Dictionary',
+  //         'engineering': 'Engineering'
+  //       };
+        
+  //       // Use the mapping if available, otherwise use the formatted category name
+  //       const actualCategoryName = categoryMappings[categoryName] || 
+  //         categoryName.split('-').map(word => 
+  //           word.charAt(0).toUpperCase() + word.slice(1)
+  //         ).join(' ');
+        
+  //       // Find books in this category
+  //       const categoryBooks = books.filter(book => 
+  //         book.category === actualCategoryName
+  //       );
+        
+  //       console.log(`Looking for books in category: ${actualCategoryName}`);
+  //       console.log(`Found ${categoryBooks.length} books`);
+        
+  //       if (categoryBooks.length > 0) {
+  //         setSelectedBook(categoryBooks[0]);
+  //         setIsDialogOpen(true);
+  //       } else {
+  //         console.log(`No books found for category: ${actualCategoryName}`);
+  //   }
+  // };
+
+
   return (
     <section id="books" className="py-12 bg-bookstore-cream">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-bookstore-navy mb-6">Our Book Categories</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {categories.map((category) => (
-            <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            // <Card key={category.title} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <Card 
+            key={category.title} 
+            className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col cursor-pointer"
+            // onClick={() => handleBookClick(category.path)}
+           >
               <div className="aspect-w-16 aspect-h-9">
                 <img
                   src={category.image}
@@ -168,6 +229,12 @@ const BookCategories = () => {
           ))}
         </div>
       </div>
+      
+      {/* <BookDetailsDialog
+        book={selectedBook}
+        isOpen={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+      /> */}
     </section>
   );
 };

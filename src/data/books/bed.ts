@@ -10,7 +10,7 @@ export const bEdBooks: Book[] = [
   //   subject: 'Psychology',
   //   price: 599,
   //   originalPrice: 699,
-  //   coverImage: "/images/books/bed/47.jpg",
+  //   coverImage: "/compressed/bed/47.webp",
   //   description: 'Complete guide to educational psychology for B.Ed students'
   // },
   // BED sem 1
@@ -22,7 +22,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 408,
     originalPrice: 510,
-    coverImage: "/images/books/bed/2786.jpg",
+    coverImage: "/compressed/bed/2786.webp",
     description: 'Comprehensive scanner for B.Ed Semester 1 (Edition: JAN,2025)',
     semester: "Semester 1"
   },
@@ -34,7 +34,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 376,
     originalPrice: 470,
-    coverImage: "/images/books/bed/2787.jpg",
+    coverImage: "/compressed/bed/2787.webp",
     description: 'Complete study material for B.Ed Semester 1 (Edition: SEPT,24-25)',
     semester: "Semester 1"
   },
@@ -46,7 +46,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 152,
     originalPrice: 190,
-    coverImage: "/images/books/bed/3058.jpg",
+    coverImage: "/compressed/bed/3058.webp",
     description: 'Concept and relationships of subject matter for B.Ed students (Topic: V, Edition: SEPT,2024)',
     semester: "Semester 1"
   },
@@ -60,7 +60,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 344,
     originalPrice: 430,
-    coverImage: "/images/books/bed/3077.jpg",
+    coverImage: "/compressed/bed/3077.webp",
     description: 'Complete study material for B.Ed Semester 2 (Edition: MAY,2024-25)',
     semester: "Semester 2"
   },
@@ -72,7 +72,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 418,
     originalPrice: 510,
-    coverImage: "/images/books/bed/3095.jpg",
+    coverImage: "/compressed/bed/3095.webp",
     description: 'Comprehensive scanner for B.Ed Semester 2 (Publisher: AHELI PUBLISHERS, Edition: JUNE,2024)',
     semester: "Semester 2"
   },
@@ -84,7 +84,7 @@ export const bEdBooks: Book[] = [
     subject: 'Bengali',
     price: 224,
     originalPrice: 280,
-    coverImage: "/images/books/bed/3109.jpg",
+    coverImage: "/compressed/bed/3109.webp",
     description: 'Language teaching methodology for Bengali (Topic: VII(A), Edition: AUG,2024-25)',
     semester: "Semester 2"
   },
@@ -96,7 +96,7 @@ export const bEdBooks: Book[] = [
     subject: 'Geography',
     price: 160,
     originalPrice: 200,
-    coverImage: "/images/books/bed/3111.jpg",
+    coverImage: "/compressed/bed/3111.webp",
     description: 'Social science teaching methodology for Geography (Topic: VII(A), Edition: AUG,2024-25)',
     semester: "Semester 2"
   },
@@ -108,7 +108,7 @@ export const bEdBooks: Book[] = [
     subject: 'Language',
     price: 200,
     originalPrice: 250,
-    coverImage: "/images/books/bed/3113.jpg",
+    coverImage: "/compressed/bed/3113.webp",
     description: 'Comprehensive guide on language teaching pedagogy (Topic: VII(A), Edition: JULY,2023)',
     semester: "Semester 2"
   },
@@ -122,7 +122,7 @@ export const bEdBooks: Book[] = [
     subject: 'Sanskrit',
     price: 208,
     originalPrice: 260,
-    coverImage: "/images/books/bed/3137.jpg",
+    coverImage: "/compressed/bed/3137.webp",
     description: 'Complete study material for Sanskrit teaching (Publisher: RITA PUBLICATION, Edition: OCT,2024-25)',
     semester: "Semester 3"
   },
@@ -134,7 +134,7 @@ export const bEdBooks: Book[] = [
     subject: 'Geography',
     price: 128,
     originalPrice: 160,
-    coverImage: "/images/books/bed/3145.jpg",
+    coverImage: "/compressed/bed/3145.webp",
     description: 'Social science teaching methodology for Geography (Topic: VII(B), Edition: APRIL,2024-25)',
     semester: "Semester 3"
   },
@@ -148,7 +148,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 304,
     originalPrice: 380,
-    coverImage: "/images/books/bed/3167.jpg",
+    coverImage: "/compressed/bed/3167.webp",
     description: 'Complete study material for B.Ed Semester 4 (Edition: JULY,2024-25)',
     semester: "Semester 4"
   },
@@ -160,7 +160,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 408,
     originalPrice: 510,
-    coverImage: "/images/books/bed/3172.jpg",
+    coverImage: "/compressed/bed/3172.webp",
     description: 'Comprehensive scanner for B.Ed Semester 4 (Publisher: AHELI PUBLISHERS, Edition: MAY,2024)',
     semester: "Semester 4"
   },
@@ -172,7 +172,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 112,
     originalPrice: 140,
-    coverImage: "/images/books/bed/3175.jpg",
+    coverImage: "/compressed/bed/3175.webp",
     description: 'Guidance and counseling for education (Topic: XI, Edition: JUNE,2023-24)',
     semester: "Semester 4"
   },
@@ -184,7 +184,7 @@ export const bEdBooks: Book[] = [
     subject: 'Education',
     price: 200,
     originalPrice: 250,
-    coverImage: "/images/books/bed/3176.jpg",
+    coverImage: "/compressed/bed/3176.webp",
     description: 'Knowledge and curriculum theory and application (Topic: VII(B), Edition: JAN,2023-24)',
     semester: "Semester 4"
   }
